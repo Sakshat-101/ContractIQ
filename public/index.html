@@ -6,7 +6,34 @@
     <meta name="theme-color" content="#1e293b" />
     <meta name="description" content="ContractIQ - AI-powered contract analyzer and generator" />
     <title>ContractIQ - AI Contract Analyzer</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              'fadeIn': 'fadeIn 0.5s ease-out'
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .animate-fadeIn {
+          animation: fadeIn 0.5s ease-out;
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
